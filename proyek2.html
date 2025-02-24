@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek 2</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffffff, #ffffff);
+        }
+        header {
+            background-color: #ff0099;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        .main-video {
+            flex: 2;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transform: translateY(20px);
+            animation: slideUp 0.8s forwards;
+        }
+        .main-video img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .main-video img:hover {
+            transform: scale(1.05);
+        }
+        .sidebar {
+            flex: 1;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transform: translateX(20px);
+            animation: slideIn 0.8s forwards;
+        }
+        .video-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.3s;
+        }
+        .video-item:hover {
+            background: #f1f1f1;
+            transform: scale(1.05);
+        }
+        .video-item img {
+            width: 80px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .video-item p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Proyek 2 - UI YouTube
+    </header>
+
+    <div class="container">
+        <div class="main-video">
+            <h2>Detail Proyek 2</h2>
+            <img src="proyek2.jpg" alt="Proyek 2">
+            <p>Deskripsi proyek 2 yang telah kamu kerjakan.</p>
+        </div>
+        
+        <div class="sidebar">
+            <h3>Video Terkait</h3>
+            <div class="video-item">
+                <img src="thumbnail1.jpg" alt="Video 1">
+                <p>Proyek Lain 1</p>
+            </div>
+            <div class="video-item">
+                <img src="thumbnail2.jpg" alt="Video 2">
+                <p>Proyek Lain 2</p>
+            </div>
+            <div class="video-item">
+                <img src="thumbnail3.jpg" alt="Video 3">
+                <p>Proyek Lain 3</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
